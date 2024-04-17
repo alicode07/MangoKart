@@ -54,4 +54,14 @@
 .slides img
 {
     position: absolute;
+    /* border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%; */
+    
+}
+@media (min-width: 992px) and (max-width : 2737px){
+    .slides img
+    {
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+    }
 }
