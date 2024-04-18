@@ -64,18 +64,32 @@
     </section>
     
     <!-- slider -->
-    <section>
+    <!-- <section>
         <div class="slider">
             <div class="slides">
                 <img src="../assets/mainbanner1-1920x870.jpg" alt="" id="slide1">
                 <img src="../assets/mainbanner2-1920x870.jpg" alt="" id="slide2">,.
             </div>
         </div>
-    </section>
+    </section> -->
 <section class="big" style="width: 100%;height: 500rem;">
 
 </section>
 
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script> 
+<script>
+    $(window).scroll(function()
+{ 
+    if($(window).scrollTop())
+    {
+        $("nav").addClass("black")
+    }
+    else{
+        $("nav").removeClass("black")
+    }
+
+})
     
+</script>
 </body>
 </html>
