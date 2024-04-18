@@ -257,6 +257,7 @@ a.active
     background-color: aliceblue;
     width: 500px;
     /* display: none; */
+    /* margin-bottom: 50px; */
     padding: 30px;
     height: auto;
     border-radius: 10px;
