@@ -143,7 +143,7 @@ nav .sticky
 .upperNews
 {
     width: 100%;
-    height: 30px;
+    height: auto;
    background-color: rgb(249, 240, 2);
 }
 .banner img
@@ -168,6 +168,14 @@ nav .sticky
         border-bottom-left-radius: 50%;
         border-bottom-right-radius: 50%;
     }
+
+}
+@media (min-width: 0px) and (max-width : 997px)
+{
+    .returnLink1,.returnLink2
+    {
+          
+    } 
 }
 @media (prefer-reduced-motion:no-preference)
 {
@@ -176,3 +184,134 @@ nav .sticky
         scroll-behavior: smooth;
     }
 }
+
+
+/* Login Design */
+
+.returnLink1
+{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    width: auto;
+    height: 80px;
+    background-color: rgb(247, 198, 5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+}
+.returnLink2
+{
+    margin-top: 30px;
+    border-radius: 10px;
+    width: auto;
+    height: 80px;
+    background-color: rgb(247, 198, 5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+}
+
+
+
+a.active
+{
+    color: rgb(215, 71, 9);
+}
+/* login Page CSS */
+.loginCard
+{
+    margin-top: 20px;
+    /* border: 1px solid green; */
+    display: flex;
+    /* width: 500px; */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+   /* background-color: aliceblue; */
+    /* margin-left: auto; */
+
+}
+#innercard1
+{
+    background-color: aliceblue;
+    width: 500px;
+    /* display: none; */
+    padding: 30px;
+    height: auto;
+    border-radius: 10px;
+}
+.innercard
+{
+    background-color: aliceblue;
+    width: 500px;
+    /* display: none; */
+    padding: 30px;
+    height: auto;
+    border-radius: 10px;
+}
+#email,#password
+{
+    padding: 5px 10px;
+    margin-top: 10px;
+    width: 100%;
+    background-color: whitesmoke;
+}
+.btns
+{
+    /* padding: 9px; */
+}
+#loginbtn,#signupbtn
+{
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: greenyellow;
+    border-radius: 5px;
+}
+#loginbtn:hover{
+    background-color: rgb(171, 223, 92);
+    
+}
+#signupbtn:hover{
+    background-color: rgb(171, 223, 92);
+}
+
+/* sign up card */
+#innercard .signUpCard 
+{
+    display: flex;
+    background-color: aliceblue;
+    width: 500px;
+    height: auto;
+}
+#firstName,#lastName,#signEmail,#mobile,#signPass,#signCnfpass
+{
+    padding: 5px 10px;
+    margin-top: 10px;
+    width: 100%;
+    background-color: whitesmoke;
+}
+#regBtn
+{
+    padding: 10px 20px;
+    margin-right: 10px;
+    margin-top: 30px;
+    background-color: greenyellow;
+    border-radius: 5px;
+}
+#regBtn:hover{
+    background-color: rgb(171, 223, 92);
+}
+
+
+
+
+
