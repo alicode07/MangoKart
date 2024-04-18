@@ -122,12 +122,16 @@
 .counter
 {
      position: absolute;
-    color: rgb(111, 222, 37);
+    color:white;
+    background-color: black;
     font-family: 'Times New Roman', Times, serif;
     font-size: 0.7rem;
     display: flex;
     justify-content: center;
     top: 14px;
+    width: 25px;
+    height: auto;
+    border-radius: 50%;
     left: auto;
 }
 nav .sticky
