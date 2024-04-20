@@ -1,9 +1,10 @@
-const loginbtn=document.getElementById("loginbtn")
+// const loginbtn=document.getElementById("loginbtn")
 const signupbtn=document.getElementById("signupbtn")
 const innercard=document.querySelector(".innercard")
 const returnLink1=document.querySelector(".returnLink1")
 const returnLink=document.querySelector(".returnLink")
 const loginCard=document.querySelector(".loginCard")
+
 
 
 
@@ -60,16 +61,12 @@ signupbtn.addEventListener("click",()=>
 
 
 
-//treding section
+//trending section
 
-const btn1=document.getElementById("btn1")
-const btn2=document.getElementById("btn2")
-const btn3=document.getElementById("btn3")
-btn1.addEventListener("click",()=>
-{
-    console.log(btn1)
-})
-// console.log
+
+
+
+
 
 
 
