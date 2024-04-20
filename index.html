@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../Home-page/style.css">
     <script src="index.js" defer></script>
     <link rel="icon" type="image/x-icon" href="../assets/MangoKart_logo.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js" defer></script>
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -14,6 +16,7 @@
   
   <script src="https://cdn.tailwindcss.com" defer></script>
   <script src="./Home-Page/index.js" defer></script>
+  <script type="module" src="./login-signup Page/auth.js" defer></script>
   
    
 </head>
@@ -51,10 +54,13 @@
                         </div>
                     </div>
                     <div class="bag">
+                        
                         <div class="navRight3">
-                            <img src="../assets/shop-bag-thin.svg" alt="" class="rightNav" srcset="">
+                            <a href="#" class="rightNav">
+                            <img src="../assets/shop-bag-thin.svg" alt="" class="rightNav" srcset=""></a>
                         </div>
-                        <div class="counter" style="text-align: center;">0</div>
+                        <a href="index.html" class="counter">
+                        <div class="counter" style="text-align: center;"></div></a>
                     </div>
                     <div class="navRight4">
                         <img src="../assets/setting-menu-1.svg" alt="" id="rightNav" srcset="" style="width: 30px;">
@@ -63,22 +69,101 @@
             </div>
         </nav>
     </section>
-
-         
-    <!-- slider -->
-    <!-- <section>
-        <div class="slider">
-            <div class="slides">
-                <img src="../assets/mainbanner1-1920x870.jpg" alt="" id="slide1">
-                <img src="../assets/mainbanner2-1920x870.jpg" alt="" id="slide2">,.
-            </div>
-        </div>
-    </section> -->
- 
+       
+    <!-- slider  -->
+<section style="height: auto;">
+    <img src="assets/mainbanner1-1920x870.jpg" alt="" id="bannerImg">
     
-<section class="big" style="width: 100%;height: 500rem;">
+</section>
+<br>
+<section>
+    <h3 style="text-align: center; text-decoration: underline;">Top Categories</h3>
+    <div class="lr-sliderImg">
+        <div class="hrleft">
+
+        </div>
+        <div id="leftArrow"><box-icon name='caret-left-circle'></box-icon></div>
+        <div id="rightArrow"><box-icon name='caret-right-circle'></box-icon></div>
+        <div class="hrright"></div>
+        </div>
+    </div>
+</section>
+<section>
+     <div class="categoriesCart">
+         <div class="fruitCate" >
+              <div class="bottomimg" style="margin-right: 10px;">
+                <div class="topData" >
+                   FRUITS
+                </div>
+                 <img src="assets/Fruitcate.png"  id="fruitImgCat" >
+              </div>
+              <div class="bottomimg" style="margin-right: 10px;">
+                <div class="topData" style="text-align: center; margin-top: px;">
+                   BREADS
+                </div>
+                 <img src="assets/breadCate.png"  id="fruitImgCat" >
+              </div>
+              <div class="bottomimg" style="margin-right: 10px;">
+                <div class="topData" style="text-align: center; margin-top: px;">
+                  JUICES
+                </div>
+                 <img src="assets/juiceCate.png"  id="fruitImgCat" >
+              </div>
+              <div class="bottomimg" style="margin-right: 10px;">
+                <div class="topData" style="text-align: center; margin-top: px;">
+                   GRAINS
+                </div>
+                 <img src="assets/grainCate.png"  id="fruitImgCat" >
+              </div>
+              <div class="bottomimg" style="margin-right: 10px;">
+                <div class="topData" style="text-align: center;
+                margin-left: 40px; ">
+                   VEGETABLE
+                </div>
+                 <img src="assets/vegTop.png"  id="fruitImgCat" >
+              </div>
+              
+         </div>
+         <!-- <div>
+            <div class="bottomimg">
+                <div class="topData" style="text-align: center;">
+                   FRUITS
+                </div>
+                 <img src="assets/Fruitcate.png"  id="fruitImgCat" >
+              </div>
+         </div> -->
+
+     </div>
+</section>
+<section>
 
 </section>
+    
+ 
+    
+  <section class="big" style="width: 100%;height: 500rem;"> 
+
+</section> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script> 
 <script>
@@ -99,5 +184,6 @@
 
     
 </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

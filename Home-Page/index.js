@@ -55,3 +55,8 @@ signupbtn.addEventListener("click",()=>
     `  
      
 })
+
+// slider
+
+
+

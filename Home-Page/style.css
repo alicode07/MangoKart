@@ -122,7 +122,7 @@
     font-size: 0.7rem;
     display: flex;
     justify-content: center;
-    top: 14px;
+    top: 7px;
     width: 25px;
     height: auto;
     border-radius: 50%;
@@ -132,6 +132,9 @@
 {
     position: fixed;
     top: 0;
+    z-index: 100;
+    /* opacity: 0.4; */
+
 }
 nav .sticky
 {
@@ -165,21 +168,44 @@ nav .sticky
     border-bottom-right-radius: 50%; */
     
 }
-@media (min-width: 992px) and (max-width : 2737px){
+@media (min-width: 501px) and (max-width : 2737px){
     .slides img
     {
         border-bottom-left-radius: 50%;
         border-bottom-right-radius: 50%;
     }
+    #bannerImg
+    {
+        border-bottom-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+    }
+
 
 }
-/* @media (min-width: 0px) and (max-width : 997px)
+@media (min-width: 0px) and (max-width : 500px)
 {
-    .returnLink1,.returnLink2
+    .categoriesCart
     {
-          
-    } 
-} */
+        padding: 0;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+    }
+     .fruitCate
+     {
+        padding: 0;
+        display: flex;
+        justify-content: start;
+     }
+     .bottomimg
+     {
+        display: flex;
+        justify-content: start;
+        overflow: hidden;
+     }
+    
+      
+}
 /* @media (prefer-reduced-motion:no-preference)
 {
     html
@@ -187,6 +213,110 @@ nav .sticky
         scroll-behavior: smooth;
     }
 } */
+
+/* Slider */
+
+/* Top Categories */
+
+.lr-sliderImg
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+   /* border: 2px solid red; */
+}
+#leftArrow
+{
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#rightArrow
+{
+    margin-left: 10px;
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    cursor: pointer;
+}
+.hrleft,.hrright
+{
+    width: 40px;
+    border: 1px solid black;
+   
+}
+#leftArrow:hover{
+    background-color: rgb(39, 255, 1);
+    transition: 0.5s all ease-in;
+}
+#rightArrow:hover{
+    background-color: rgb(39, 255, 1);
+    transition: 0.5s all ease-in;
+}
+/* Category Top */
+.categoriesCart
+{
+    /* border: 2px solid greenyellow; */
+    /* position: relative; */
+    /* padding: 2px; */
+    display: flex;
+    /* width: 50rem; */
+    cursor: pointer;
+    width: auto;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    /* position: relative; */
+
+}
+.fruitCate
+{
+    /* border: 2px solid black; */
+    /* position: relative; */
+    display: flex;
+   justify-content: center;
+   align-items: center;
+    flex-wrap: wrap;
+    width: auto;
+
+}
+.topData
+{
+    position: absolute;
+   
+    margin-left: 60px;
+    margin-top: 10px;
+    
+    /* font-size: 0.5rem; */
+    
+
+}
+
+.bottomimg
+{
+    border: 2px solid rgb(210, 205, 205);
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 aliceblue;
+   
+    /* width: 100px; */ 
+    width:200px;
+    margin-bottom: 10px;
+}
+
+
+  
+  
+
+
+
+
+
+
+
+
 
 
 /* Login Design */
