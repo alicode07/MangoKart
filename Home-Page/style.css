@@ -302,12 +302,19 @@ nav .sticky
 .bottomimg
 {
     border: 2px solid rgb(210, 205, 205);
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 0 5px 0 aliceblue;
     position: relative;
-    /* width: 100px;  */
-    /* width:200px; */
-    margin-bottom: 10px;
+    /* width:auto;  */
+    width:200px;
+    margin-bottom: 20px;
+    
+}
+#fruitImgCat
+{
+    margin-left: auto ;
+    margin-right: auto;
+    width: 100%;
 }
 
 
