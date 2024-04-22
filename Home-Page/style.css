@@ -181,6 +181,7 @@ nav .sticky
         border-bottom-left-radius: 50%;
         
     }
+    
 
 
 }
@@ -201,9 +202,9 @@ nav .sticky
      }
      .bottomimg
      {
-        display: flex;
-        justify-content: start;
-        overflow: hidden;
+        /* display: flex;
+        justify-content: start; */
+        overflow:hidden ;
      }
      
     
@@ -269,6 +270,7 @@ nav .sticky
     /* width: 50rem; */
     cursor: pointer;
     width: auto;
+    
     margin-top: 20px;
     justify-content: center;
     align-items: center;
@@ -284,6 +286,7 @@ nav .sticky
    align-items: center;
     flex-wrap: wrap;
     width: auto;
+    height: auto;
 
 }
 .topData
@@ -291,8 +294,8 @@ nav .sticky
     position: absolute;
     left: 50%;
     transform: translate(-50%);
-    margin-top: 20px;
-    
+    margin-top: 10px;
+    text-align: center;
     
     /* font-size: rem; */
     
@@ -306,15 +309,20 @@ nav .sticky
     box-shadow: 0 0 5px 0 aliceblue;
     position: relative;
     /* width:auto;  */
+    /* margin-left: 10px; */
+    height: auto;
     width:200px;
-    margin-bottom: 20px;
+    margin-bottom:20px;
+    margin-right: 10px;
     
 }
-#fruitImgCat
+.fruitImgCat
 {
     margin-left: auto ;
     margin-right: auto;
+    /* position: relative; */
     width: 100%;
+    /* height: 50%; */
 }
 
 
@@ -348,7 +356,60 @@ nav .sticky
 {
     background-color: rgb(176, 245, 73); 
 }
+#btn1
+{
+    background-color: rgb(176, 245, 73);
+}
+.priceTag
+{
+    background: rgb(176, 245, 73);
+    color: #252042;
+    position: absolute;
+    width: 100%;
+    top:205px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    /* transform: rotate(-45deg); */
 
+   
+}
+
+/* ADD TO CART DESIGN */
+
+.addToCartMain
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px; 
+    /* position: absolute; */
+    top: 202px;
+
+     
+}
+.AddTable
+{
+    border-collapse: collapse;  
+    height: 30px;
+}
+.AddCart
+{
+    width: 30px;
+}
+.DisCart
+{
+    font-size: 0.8rem;
+    width: 30px;
+}
+.DelCart
+{
+    width: 30px;
+
+
+}
 
   
   
