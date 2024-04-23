@@ -187,6 +187,7 @@ function getData1(){
               </div>
     `
 } 
+getData1()
 function getData2(){
     return dynTrend.innerHTML=
     `
