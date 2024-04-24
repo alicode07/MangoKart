@@ -5,24 +5,29 @@ const dynTrend=document.querySelector("#dynTrend")
 const AddCart=document.querySelector(".AddCart")
 const DisCart=document.querySelector(".DisCart")
 const DelCart=document.querySelector(".DelCart")
+let basket=JSON.parse(localStorage.getItem("data")) ||[]
 const TrendProduct2=[
     
     {
+        id:"5",
         name:"CARROT",
         img:"./assets/GAZAR.png",
         price:"₹30"
     },
     {
+        id:"6",
         name:"KIWI JUICE",
         img:"./assets/KIWI JUICE.jpg",
         price:"₹50"
     },
     {
+        id:"7",
         name:"WATERMELON",
         img:"./assets/WATERMELON.jpg",
         price:"₹30"
     },
     {
+        id:"8",
         name:"WHEAT ",
         img:" ./assets/WHEAT.jpg",
         price:"₹25"
@@ -31,22 +36,26 @@ const TrendProduct2=[
 ];
 const TrendProduct1=[
     
-    {
+    { 
+        id:"1",
         name:"BROCALLI",
         img:"./assets/pine.png",
         price:"₹120"
     },
     {
+        id:"2",
         name:"KIWI",
         img:"./assets/KIWI.jpg",
         price:"₹50"
     },
     {
+        id:"3",
         name:"GINJERJUICE",
         img:"./assets/GINJAR JUICE.jpg",
         price:"₹60"
     },
-    {
+    {   
+        id:"4",
         name:"APPLE ",
         img:" ./assets/APPLE.jpg",
         price:"₹90"
@@ -56,38 +65,47 @@ const TrendProduct1=[
 const TrendProduct3=[
     
     {
+        id:"9",
         name:"MELON JUICE",
         img:"./assets/MELON JUICE.jpg",
         price:"₹30"
     },
-    {
+    {   
+        id:"10",
         name:"BANANA",
         img:"./assets/BANANA1.jpg",
         price:"₹40"
     },
     {
+        id:"11",
         name:"ORANGE",
         img:"./assets/ORANGE.jpg",
         price:"₹45"
     },
-    {
+    {  
+        id:"12",
         name:"ORANGE ICE",
         img:" ./assets/ORANGE WITH ICE.jpg",
         price:"₹55"
 
     }
 ];  
-function getData1(){
-    return dynTrend.innerHTML=
-    ` 
-      
-    <div class="bottomimg" style="margin-right: 10px;">
+
+let getData1 =()=>{
+    return (dynTrend.innerHTML=TrendProduct1.map((x)=>
+   { 
+      let {id,name,price,img}=x;
+      let search=basket.find((x)=>x.id===id) || []
+      console.log(search)
+     
+       return `
+       <div class="bottomimg" style="margin-right: 10px;">
                 <div class="topData" >
-                   ${TrendProduct1[0].name}
+                   ${name}
                 </div>
-                 <img src="${TrendProduct1[0].img}" class="fruitImgCat">
+                 <img src="${img}" class="fruitImgCat">
                  <div class="priceTag">
-                     ${TrendProduct1[0].price}
+                     ${price}
                 </div>
                  <hr >
                  <div class="addToCartMain">
@@ -98,314 +116,99 @@ function getData1(){
                      <div class="addToCart">
                         <table border="1"  class="AddTable">
                              <tr>
-                                <th class="AddCart">+</th>
-                                <th class="DisCart"></th>
-                                <th class="DelCart">-</th>
+                                <th class="AddCart" onclick="increase1 ${id}">+</th>
+                                <th class="DisCart" id="${id}"></th>
+                                <th class="DelCart" onclick="decrease ${id}">-</th>
                              </tr>
                         </table>
                      </div>
 
                  </div>
-              </div>
-     <div class="bottomimg" style="margin-right: 10px;">
-                <div class="topData" >
-                ${TrendProduct1[1].name}
-                </div>
-                 <img src="${TrendProduct1[1].img}" class="fruitImgCat">
-                 <div class="priceTag">
-                 ${TrendProduct1[1].price}
-                </div>
-                 <hr >
-                 <div class="addToCartMain">
-                     <div class="Wishlist">
-                        <img src="./assets/heart-thin-icon.svg" alt="" width="25" >
-                        <!-- <img src="./assets/heart-icon.svg" alt="" width="30" > -->
-                     </div>
-                     <div class="addToCart">
-                        <table border="1"  class="AddTable">
-                             <tr>
-                                <th class="AddCart">+</th>
-                                <th class="DisCart"></th>
-                                <th class="DelCart">-</th>
-                             </tr>
-                        </table>
-                     </div>
-
-                 </div>
-              </div>
-     <div class="bottomimg" style="margin-right: 10px;">
-                <div class="topData" >
-                ${TrendProduct1[2].name}
-                </div>
-                 <img src="${TrendProduct1[2].img}" class="fruitImgCat">
-                 <div class="priceTag">
-                 ${TrendProduct1[2].price}
-                </div>
-                 <hr >
-                 <div class="addToCartMain">
-                     <div class="Wishlist">
-                        <img src="./assets/heart-thin-icon.svg" alt="" width="25" >
-                        <!-- <img src="./assets/heart-icon.svg" alt="" width="30" > -->
-                     </div>
-                     <div class="addToCart">
-                        <table border="1"  class="AddTable">
-                             <tr>
-                                <th class="AddCart">+</th>
-                                <th class="DisCart"></th>
-                                <th class="DelCart">-</th>
-                             </tr>
-                        </table>
-                     </div>
-
-                 </div>
-              </div>
-     <div class="bottomimg" style="margin-right: 10px;">
-                <div class="topData" >
-                ${TrendProduct1[3].name}
-                </div>
-                 <img src="${TrendProduct1[3].img}" class="fruitImgCat">
-                 <div class="priceTag">
-                 ${TrendProduct1[3].price}
-                </div>
-                 <hr >
-                 <div class="addToCartMain">
-                     <div class="Wishlist">
-                        <img src="./assets/heart-thin-icon.svg" alt="" width="25" >
-                        <!-- <img src="./assets/heart-icon.svg" alt="" width="30" > -->
-                     </div>
-                     <div class="addToCart">
-                        <table border="1"  class="AddTable">
-                             <tr>
-                                <th class="AddCart">+</th>
-                                <th class="DisCart"></th>
-                                <th class="DelCart">-</th>
-                             </tr>
-                        </table>
-                     </div>
-
-                 </div>
-              </div>
-    `
-} 
+              </div>`
+   }).join(" "))
+    
+};
 getData1()
-function getData2(){
-    return dynTrend.innerHTML=
-    `
-    <div class="bottomimg" style="margin-right: 10px;">
-                <div class="topData" >
-                   ${TrendProduct2[0].name}
-                </div>
-                 <img src="${TrendProduct2[0].img}" class="fruitImgCat">
-                 <div class="priceTag">
-                 ${TrendProduct2[0].price}
-                </div>
-                 <hr >
-                 <div class="addToCartMain">
-                     <div class="Wishlist">
-                        <img src="./assets/heart-thin-icon.svg" alt="" width="25" >
-                        <!-- <img src="./assets/heart-icon.svg" alt="" width="30" > -->
-                     </div>
-                     <div class="addToCart">
-                        <table border="1"  class="AddTable">
-                             <tr>
-                                <th class="AddCart">+</th>
-                                <th class="DisCart"></th>
-                                <th class="DelCart">-</th>
-                             </tr>
-                        </table>
-                     </div>
+let getData2=()=>
+{
+   return (dynTrend.innerHTML=TrendProduct2.map((x)=>
+   {
+      let {id,name,price,img}=x;
 
-                 </div>
-              </div>
-     <div class="bottomimg" style="margin-right: 10px;">
-                <div class="topData" >
-                ${TrendProduct2[1].name}
-                </div>
-                 <img src="${TrendProduct2[1].img}" class="fruitImgCat">
-                 <div class="priceTag">
-                 ${TrendProduct2[1].price}
-                </div>
-                 <hr >
-                 <div class="addToCartMain">
-                     <div class="Wishlist">
-                        <img src="./assets/heart-thin-icon.svg" alt="" width="25" >
-                        <!-- <img src="./assets/heart-icon.svg" alt="" width="30" > -->
-                     </div>
-                     <div class="addToCart">
-                        <table border="1"  class="AddTable">
-                             <tr>
-                                <th class="AddCart">+</th>
-                                <th class="DisCart"></th>
-                                <th class="DelCart">-</th>
-                             </tr>
-                        </table>
-                     </div>
+      return `
+      <div class="bottomimg" style="margin-right: 10px;">
+               <div class="topData" >
+                  ${name}
+               </div>
+                <img src="${img}" class="fruitImgCat">
+                <div class="priceTag">
+                    ${price}
+               </div>
+                <hr >
+                <div class="addToCartMain">
+                    <div class="Wishlist">
+                       <img src="./assets/heart-thin-icon.svg" alt="" width="25" >
+                       <!-- <img src="./assets/heart-icon.svg" alt="" width="30" > -->
+                    </div>
+                    <div class="addToCart">
+                       <table border="1"  class="AddTable">
+                            <tr>
+                               <th class="AddCart"onclick="increase2 ${id}">+</th>
+                               <th class="DisCart" onclick="decrease2 ${id}"></th>
+                               <th class="DelCart">-</th>
+                            </tr>
+                       </table>
+                    </div>
 
-                 </div>
-              </div>
-     <div class="bottomimg" style="margin-right: 10px;">
-                <div class="topData" >
-                ${TrendProduct2[2].name}
                 </div>
-                 <img src="${TrendProduct2[2].img}" class="fruitImgCat">
-                 <div class="priceTag">
-                 ${TrendProduct2[2].price}
-                </div>
-                 <hr >
-                 <div class="addToCartMain">
-                     <div class="Wishlist">
-                        <img src="./assets/heart-thin-icon.svg" alt="" width="25" >
-                        <!-- <img src="./assets/heart-icon.svg" alt="" width="30" > -->
-                     </div>
-                     <div class="addToCart">
-                        <table border="1"  class="AddTable">
-                             <tr>
-                                <th class="AddCart">+</th>
-                                <th class="DisCart"></th>
-                                <th class="DelCart">-</th>
-                             </tr>
-                        </table>
-                     </div>
+             </div>`
 
-                 </div>
-              </div>
-     <div class="bottomimg" style="margin-right: 10px;">
-                <div class="topData" >
-                ${TrendProduct2[3].name}
-                </div>
-                 <img src="${TrendProduct2[3].img}" class="fruitImgCat">
-                 <div class="priceTag">
-                 ${TrendProduct2[3].price}
-                </div>
-                 <hr >
-                 <div class="addToCartMain">
-                     <div class="Wishlist">
-                        <img src="./assets/heart-thin-icon.svg" alt="" width="25" >
-                        <!-- <img src="./assets/heart-icon.svg" alt="" width="30" > -->
-                     </div>
-                     <div class="addToCart">
-                        <table border="1"  class="AddTable">
-                             <tr>
-                                <th class="AddCart">+</th>
-                                <th class="DisCart"></th>
-                                <th class="DelCart">-</th>
-                             </tr>
-                        </table>
-                     </div>
 
-                 </div>
-              </div>
-    `
-} 
-function getData3(){
-    return dynTrend.innerHTML=
-    `
-    <div class="bottomimg" style="margin-right: 10px;">
-                <div class="topData" >
-                   ${TrendProduct3[0].name}
-                </div>
-                 <img src="${TrendProduct3[0].img}" class="fruitImgCat">
-                 <div class="priceTag">
-                 ${TrendProduct3[0].price}
-                </div>
-                 <hr >
-                 <div class="addToCartMain">
-                     <div class="Wishlist">
-                        <img src="./assets/heart-thin-icon.svg" alt="" width="25" >
-                        <!-- <img src="./assets/heart-icon.svg" alt="" width="30" > -->
-                     </div>
-                     <div class="addToCart">
-                        <table border="1"  class="AddTable">
-                             <tr>
-                                <th class="AddCart">+</th>
-                                <th class="DisCart"></th>
-                                <th class="DelCart">-</th>
-                             </tr>
-                        </table>
-                     </div>
 
-                 </div>
-              </div>
-     <div class="bottomimg" style="margin-right: 10px;">
-                <div class="topData" >
-                ${TrendProduct3[1].name}
-                </div>
-                 <img src="${TrendProduct3[1].img}" class="fruitImgCat">
-                 <div class="priceTag">
-                 ${TrendProduct3[1].price}
-                </div>
-                 <hr >
-                 <div class="addToCartMain">
-                     <div class="Wishlist">
-                        <img src="./assets/heart-thin-icon.svg" alt="" width="25" >
-                        <!-- <img src="./assets/heart-icon.svg" alt="" width="30" > -->
-                     </div>
-                     <div class="addToCart">
-                        <table border="1"  class="AddTable">
-                             <tr>
-                                <th class="AddCart">+</th>
-                                <th class="DisCart"></th>
-                                <th class="DelCart">-</th>
-                             </tr>
-                        </table>
-                     </div>
+   }
 
-                 </div>
-              </div>
-     <div class="bottomimg" style="margin-right: 10px;">
-                <div class="topData" >
-                ${TrendProduct3[2].name}
-                </div>
-                 <img src="${TrendProduct3[2].img}" class="fruitImgCat">
-                 <div class="priceTag">
-                 ${TrendProduct3[2].price}
-                </div>
-                 <hr >
-                 <div class="addToCartMain">
-                     <div class="Wishlist">
-                        <img src="./assets/heart-thin-icon.svg" alt="" width="25" >
-                        <!-- <img src="./assets/heart-icon.svg" alt="" width="30" > -->
-                     </div>
-                     <div class="addToCart">
-                        <table border="1"  class="AddTable">
-                             <tr>
-                                <th class="AddCart">+</th>
-                                <th class="DisCart"></th>
-                                <th class="DelCart">-</th>
-                             </tr>
-                        </table>
-                     </div>
 
-                 </div>
-              </div>
-     <div class="bottomimg" style="margin-right: 10px;">
-                <div class="topData" >
-                ${TrendProduct3[3].name}
-                </div>
-                 <img src="${TrendProduct3[3].img}" class="fruitImgCat">
-                 <div class="priceTag">
-                 ${TrendProduct3[3].price}
-                </div>
-                 <hr >
-                 <div class="addToCartMain">
-                     <div class="Wishlist">
-                        <img src="./assets/heart-thin-icon.svg" alt="" width="25" >
-                        <!-- <img src="./assets/heart-icon.svg" alt="" width="30" > -->
-                     </div>
-                     <div class="addToCart">
-                        <table border="1"  class="AddTable">
-                             <tr>
-                                <th class="AddCart">+</th>
-                                <th class="DisCart"></th>
-                                <th class="DelCart">-</th>
-                             </tr>
-                        </table>
-                     </div>
+).join(" "))
+};
 
-                 </div>
-              </div>
-    `
-} 
+let getData3=()=>
+{
+   return (dynTrend.innerHTML=TrendProduct3.map((x)=>
+   {
+      let {id,name,price,img}=x;
+
+      return `
+      <div class="bottomimg" style="margin-right: 10px;">
+               <div class="topData" >
+                  ${name}
+               </div>
+                <img src="${img}" class="fruitImgCat">
+                <div class="priceTag">
+                    ${price}
+               </div>
+                <hr >
+                <div class="addToCartMain">
+                    <div class="Wishlist">
+                       <img src="./assets/heart-thin-icon.svg" alt="" width="25" >
+                       <!-- <img src="./assets/heart-icon.svg" alt="" width="30" > -->
+                    </div>
+                    <div class="addToCart">
+                       <table border="1"  class="AddTable">
+                            <tr>
+                               <th class="AddCart"onclick="increase ${id}">+</th>
+                               <th class="DisCart" onclick="decrease ${id}"></th>
+                               <th class="DelCart">-</th>
+                            </tr>
+                       </table>
+                    </div>
+
+                </div>
+             </div>`
+   }
+).join(" "))
+}
+
+
     btn1.addEventListener("click",()=>
 {    
      getData1()
@@ -431,18 +234,37 @@ function getData3(){
      btn2.style.backgroundColor="rgb(200, 193, 193)"
      
 });
-let add=0;
-let del=1;
-AddCart.addEventListener("click",()=>
+
+let increase1=(id)=>
 {
-    add++
-    DisCart.innerText=add
-})
-DelCart.addEventListener("click",()=>
-{
-     add--
-     DisCart.innerText=add
-})
+   let selectedProduct=id
+   let search=basket.find((x)=>x.id===selectedProduct)
+   // if(search===undefined)
+   // {
+   //    basket.push({
+   //       id:selectedProduct,
+   //       item:1,
+   //    })
+   // }
+   // else
+   // {
+   //    search.item+=1
+   // }
+
+   
+   
+}
+
+
+
+
+
+console.log("hello")
+
+
+// Add to Cart In Cart
+
+
 
 
  

@@ -398,15 +398,18 @@ nav .sticky
 .AddCart
 {
     width: 30px;
+    cursor: pointer;
 }
 .DisCart
 {
     font-size: 0.8rem;
     width: 30px;
+    cursor: pointer;
 }
 .DelCart
 {
     width: 30px;
+    cursor: pointer;
 
 
 }
