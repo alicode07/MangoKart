@@ -5,7 +5,7 @@ const dynTrend=document.querySelector("#dynTrend")
 const AddCart=document.querySelector(".AddCart")
 const DisCart=document.querySelector(".DisCart")
 const DelCart=document.querySelector(".DelCart")
-let basket=JSON.parse(localStorage.getItem("data")) ||[]
+let basket=JSON.parse(localStorage.getItem("data")) || []
 const TrendProduct2=[
     
     {
