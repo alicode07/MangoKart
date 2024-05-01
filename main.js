@@ -60,7 +60,13 @@ const TrendProduct1=[
         img:" ./assets/APPLE.jpg",
         price:"₹90"
 
-    }
+    },
+    {
+        id:"5",
+        name:"Rice",
+        img:"./assets/Rice.jpg",
+        price:"₹30",
+    },
 ];
 const TrendProduct3=[
     
