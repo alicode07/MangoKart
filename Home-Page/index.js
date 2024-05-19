@@ -5,6 +5,12 @@ const returnLink1=document.querySelector(".returnLink1")
 const returnLink=document.querySelector(".returnLink")
 const loginCard=document.querySelector(".loginCard")
 
+const rightNav=document.querySelector("#rightNav")
+
+rightNav.addEventListener("click",()=>
+{
+   
+})
 
 
 

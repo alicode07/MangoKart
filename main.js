@@ -5,7 +5,9 @@ const dynTrend=document.querySelector("#dynTrend")
 const AddCart=document.querySelector(".AddCart")
 const DisCart=document.querySelector(".DisCart")
 const DelCart=document.querySelector(".DelCart")
+const Wishlist=document.querySelector(".Wishlist")
 let basket=JSON.parse(localStorage.getItem("data")) || []
+
 const TrendProduct2=[
     
     {
@@ -235,6 +237,7 @@ let getData3=()=>
      btn2.style.backgroundColor="rgb(200, 193, 193)"
      
 });
+
 
 let increase1=(id)=>
 {
