@@ -227,6 +227,8 @@ nav .sticky
         /* display: flex;
         justify-content: start; */
         overflow:hidden ;
+
+
      }
      
     
@@ -434,6 +436,47 @@ nav .sticky
     cursor: pointer;
 
 
+}
+.testmonialcard
+{
+    /* border: 1px solid black; */
+    width:100%;
+    margin: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.card1
+{
+    margin: 10px;
+    border: 2px solid rgb(210, 205, 205);
+    border-radius: 10px;
+    width:220px;
+    padding: 10px;
+    box-shadow: 0 0 5px 0 aliceblue;
+}
+.personTestimonial
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    border: 2px solid rgb(176, 245, 73);
+
+}
+.personName
+{
+    text-align: center;
+    padding: 5px;
+}
+.textPerson
+{
+    text-wrap: wrap;
+    text-decoration: none;
+    padding: 5px;
+    margin-bottom: 5px;
 }
 
   
