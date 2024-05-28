@@ -454,7 +454,7 @@ nav .sticky
     border: 2px solid rgb(210, 205, 205);
     border-radius: 10px;
     width: 180px;
-    padding: 10px;
+    padding: 4px;
     box-shadow: 0 0 5px 0 aliceblue;
 }
 .personTestimonial
@@ -464,19 +464,23 @@ nav .sticky
     margin-right: auto;
     border-radius: 50%;
     border: 2px solid rgb(176, 245, 73);
+    
 
 }
 .personName
 {
+    
     text-align: center;
-    padding: 5px;
+    padding: 2px;
 }
 .textPerson
 {
     text-wrap: wrap;
+     width: 100%;
     text-decoration: none;
     padding: 5px;
     margin-bottom: 5px;
+    /* border: 1px solid red; */
 }
 
   
