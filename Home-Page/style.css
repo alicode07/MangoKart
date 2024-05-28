@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
 }
 ::-webkit-scrollbar
 {
@@ -450,10 +451,11 @@ nav .sticky
 }
 .card1
 {
-    margin: 10px;
+    margin: 5px;
+    /* padding: none; */
     border: 2px solid rgb(210, 205, 205);
     border-radius: 10px;
-    width: 180px;
+    width:220px;
     padding: 4px;
     box-shadow: 0 0 5px 0 aliceblue;
 }
@@ -617,6 +619,10 @@ a.active
 #regBtn:hover{
     background-color: rgb(171, 223, 92);
 }
+/* Footer section */
+
+
+  
 
 
 
